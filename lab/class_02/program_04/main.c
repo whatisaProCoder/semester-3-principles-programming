@@ -23,3 +23,10 @@ int main() {
     }
     return 0;
 }
+
+/* OUTPUT
+add(10, 5) = 15
+sub(10, 5) = 5
+mul(10, 5) = 50
+max(10, 5) = 10
+*/
