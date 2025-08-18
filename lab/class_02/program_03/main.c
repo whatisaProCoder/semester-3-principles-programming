@@ -10,6 +10,11 @@ struct Employee {
     double salary;
 };
 
+// Function to update employee salary using a pointer to structure
+void updateSalary(struct Employee *emp, double incrementPerc) {
+    emp->salary = emp->salary * (100 + incrementPerc) / 100;
+}
+
 int main() {
     int n;
 
@@ -49,8 +54,10 @@ int main() {
             double incrementPerc;
             printf("Enter increment percentage: ");
             scanf("%lf", &incrementPerc);
-            employees[i].salary =
-                employees[i].salary * (100 + incrementPerc) / 100;
+
+            // Call the update function instead of updating directly
+            updateSalary(&employees[i], incrementPerc);
+
             printf("Salary updated to : %.2lf\n", employees[i].salary);
         }
     }
