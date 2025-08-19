@@ -87,7 +87,7 @@ void updateMarks() {
     struct Student s;
     printf("Enter roll to search: ");
     scanf("%d", &roll);
-    while (fread(&s, sizeof(struct Student), 1, fp)) {
+    while (fread(&s, sizeof(s), 1, fp)) {
         if (s.roll == roll) {
             printf("Student found!\n");
             printf("Roll: %d | Name: %s | Marks: %.2f\n", s.roll, s.name,
