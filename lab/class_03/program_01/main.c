@@ -28,7 +28,7 @@ void addRecord() {
     }
     struct Student s;
     printf("Enter name: ");
-    scanf("%49[^\n]", s.name);
+    scanf(" %[^\n]", s.name);
     printf("Enter roll: ");
     scanf("%d", &s.roll);
     printf("Enter marks: ");
@@ -47,7 +47,7 @@ void displayRecords() {
     struct Student s;
     printf("\n---Student Records---\n");
     while (fread(&s, sizeof(s), 1, fp)) {
-        printf("Roll: %d | Name: %s | Marks: %.2f", s.roll, s.name, s.marks);
+        printf("Roll: %d | Name: %s | Marks: %.2f\n", s.roll, s.name, s.marks);
     }
     fclose(fp);
 }
@@ -61,11 +61,11 @@ void searchRecord() {
     int roll, found = 0;
     struct Student s;
     printf("Enter roll to search: ");
-    scanf("%d", &s.roll);
+    scanf("%d", &roll);
     while (fread(&s, sizeof(s), 1, fp)) {
         if (s.roll == roll) {
             printf("Student found!\n");
-            printf("Roll: %d | Name: %s | Marks: %.2f", s.roll, s.name,
+            printf("Roll: %d | Name: %s | Marks: %.2f\n", s.roll, s.name,
                    s.marks);
             found = 1;
             break;
@@ -86,11 +86,11 @@ void updateMarks() {
     int roll, found = 0;
     struct Student s;
     printf("Enter roll to search: ");
-    scanf("%d", &s.roll);
+    scanf("%d", &roll);
     while (fread(&s, sizeof(struct Student), 1, fp)) {
         if (s.roll == roll) {
             printf("Student found!\n");
-            printf("Roll: %d | Name: %s | Marks: %.2f", s.roll, s.name,
+            printf("Roll: %d | Name: %s | Marks: %.2f\n", s.roll, s.name,
                    s.marks);
 
             printf("Enter new marks: ");
@@ -122,6 +122,7 @@ int main() {
         printf("5. Exit\n");
 
         printf("Enter choice: ");
+        fflush(stdout);  // Ensure prompt is displayed
         scanf("%d", &choice);
         switch (choice) {
             case 1:
