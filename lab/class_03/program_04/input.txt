@@ -1,0 +1,3 @@
+Hi,
+This is the input text file.
+Thank you.

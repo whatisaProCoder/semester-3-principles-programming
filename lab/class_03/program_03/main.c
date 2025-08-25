@@ -6,7 +6,6 @@ third file. Add line numbers while writing into the new file.
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 #define LINE_LEN 500
 
