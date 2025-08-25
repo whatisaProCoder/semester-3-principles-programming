@@ -114,7 +114,7 @@ int main() {
     int choice;
 
     do {
-        printf("\n--- Student Records Management (Binary File) ---\n");
+        printf("\n--- Student Records Management ---\n");
         printf("1. Add New Record\n");
         printf("2. Display All Records\n");
         printf("3. Search by Roll Number\n");

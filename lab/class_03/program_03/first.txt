@@ -1,0 +1,3 @@
+Hi, this is the first text file.
+It contains some text.
+Continued...

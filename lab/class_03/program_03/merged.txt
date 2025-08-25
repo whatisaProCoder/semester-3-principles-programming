@@ -1,0 +1,5 @@
+1 Hi, this is the first text file.
+2 It contains some text.
+3 Continued...
+4 Hi, this is the second text file.
+5 It contains some more text.

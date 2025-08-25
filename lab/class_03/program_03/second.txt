@@ -1,0 +1,2 @@
+Hi, this is the second text file.
+It contains some more text.
