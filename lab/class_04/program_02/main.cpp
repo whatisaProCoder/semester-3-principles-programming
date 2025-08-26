@@ -29,3 +29,9 @@ int main() {
 
   cout << "Maximum number : " << maxn << endl;
 }
+
+/* OUTPUT
+Enter the three numbers :
+1 8 5
+Maximum number : 8
+*/

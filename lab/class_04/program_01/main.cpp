@@ -25,6 +25,6 @@ int main() {
 
 /* OUTPUT
 Enter the three numbers :
-3 7 4
-Maximum number : 7
+1 8 5
+Maximum number : 8
 */
