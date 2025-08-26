@@ -29,3 +29,9 @@ int main() {
   else
     cout << num << " is not prime." << endl;
 }
+
+/* OUTPUT
+Enter number :
+6
+6 is not prime.
+*/
