@@ -4,23 +4,23 @@
 using namespace std;
 
 int max(int a, int b, int c) {
-    if (a > b && a > c)
-        return a;
-    else if (b > a && b > c)
-        return b;
-    else if (c > a && c > b)
-        return c;
+  if (a >= b && a >= c)
+    return a;
+  else if (b >= a && b >= c)
+    return b;
+  else
+    return c;
 }
 
 int main() {
-    int a, b, c;
+  int a, b, c;
 
-    cout << "Enter the three numbers :" << endl;
-    cin >> a >> b >> c;
+  cout << "Enter the three numbers :" << endl;
+  cin >> a >> b >> c;
 
-    int maxn = max(a, b, c);
+  int maxn = max(a, b, c);
 
-    cout << "Maximum number : " << maxn << endl;
+  cout << "Maximum number : " << maxn << endl;
 }
 
 /* OUTPUT
