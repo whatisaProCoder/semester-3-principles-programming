@@ -1,9 +1,15 @@
-// Write a C++ program to check if a number is prime.
+// Redo the above program using a class called Prime and appropriate member
+// functions.
 
 #include <iostream>
 using namespace std;
 
-bool check(int num) {
+class Prime {
+ public:
+  bool check(int num);
+};
+
+bool Prime::check(int num) {
   if (num <= 1) return false;
   for (int i = 2; i < num; i++) {
     if (num % i == 0) return false;
@@ -12,19 +18,14 @@ bool check(int num) {
 }
 
 int main() {
+  Prime p;
   int num;
 
   cout << "Enter number : " << endl;
   cin >> num;
 
-  if (check(num))
+  if (p.check(num))
     cout << num << " is prime." << endl;
   else
     cout << num << " is not prime." << endl;
 }
-
-/* OUTPUT
-Enter number :
-7
-7 is prime.
-*/
