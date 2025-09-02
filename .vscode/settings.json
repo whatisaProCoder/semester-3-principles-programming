@@ -2,6 +2,7 @@
   "files.associations": {
     "string.h": "c",
     "random": "cpp",
-    "iostream": "cpp"
+    "iostream": "cpp",
+    "ostream": "cpp"
   }
 }

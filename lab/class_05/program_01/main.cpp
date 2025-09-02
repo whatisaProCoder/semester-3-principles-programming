@@ -82,4 +82,17 @@ int main() {
 
   cout << "Case conversion (string): " << op.convertCase(sa, true) << endl;
   cout << "Case conversion (char[]): " << op.convertCase(ca, false) << endl;
+
+  return 0;
 }
+
+/* OUTPUT
+Concatenation (string): HelloWorld
+Concatenation (char[]): HelloWorld
+Repetition (string): HelloHello
+Repetition (char[]): HelloHello
+Substring (string): Hell
+Substring (char[]): Hell
+Case conversion (string): HELLO
+Case conversion (char[]): hello
+*/
