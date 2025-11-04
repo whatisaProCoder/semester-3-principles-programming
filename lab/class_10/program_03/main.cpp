@@ -43,7 +43,7 @@ class Shape {
   Point origin;
 
  public:
-  Shape(int x, int y) { origin = Point(x, y); }
+  Shape(int x, int y) : origin(x, y) {}
 };
 
 class Rectangle : public Shape {

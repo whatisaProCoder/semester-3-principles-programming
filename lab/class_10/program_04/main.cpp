@@ -18,3 +18,60 @@ Phone phone2 = phone1;). Call display() on the new copied object to verify all
 data was copied correctly. Observe the console output to see the order in which
 the constructors were called.
 */
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Gadget {
+ private:
+  int model_id;
+
+ public:
+  Gadget(int id) { model_id = id; }
+  Gadget(const Gadget& other) {
+    cout << "Gadget copy constructor called." << endl;
+    model_id = other.model_id;
+  }
+  int get_id() { return model_id; }
+};
+
+class Phone : public Gadget {
+ private:
+  string phone_number;
+
+ public:
+  Phone(int id, string number) : Gadget(id) { phone_number = number; }
+  Phone(const Phone& other) : Gadget(other) {
+    cout << "Phone copy constructor called." << endl;
+    phone_number = other.phone_number;
+  }
+  void display() {
+    cout << "Model ID : " << Gadget::get_id() << endl;
+    cout << "Phone number : " << phone_number << endl;
+  }
+};
+
+int main() {
+  int id;
+  string number;
+
+  cout << "Enter details...." << endl;
+  cout << "Model ID : ";
+  cin >> id;
+  cout << "Phone number : ";
+  cin >> number;
+
+  Phone p(id, number);
+  cout << "Printing details...." << endl;
+  p.display();
+}
+
+/* OUTPUT
+Enter details....
+Model ID : 172635
+Phone number : 9064327588
+Printing details....
+Model ID : 172635
+Phone number : 9064327588
+*/
