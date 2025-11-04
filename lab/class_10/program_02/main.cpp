@@ -18,3 +18,76 @@ the parameterized constructor. Call print_details() on both.
 #include <iostream>
 #include <string>
 using namespace std;
+
+class Person {
+ protected:
+  string name;
+  int age;
+
+ public:
+  Person() {
+    name = "Unknown";
+    age = 0;
+  }
+  Person(string name, int age) {
+    this->name = name;
+    this->age = age;
+  }
+};
+
+class Employee : public Person {
+ private:
+  int employee_id;
+  double salary;
+
+ public:
+  Employee() : Person() {
+    employee_id = 0;
+    salary = 0.0;
+  }
+  Employee(string name, int age, int employee_id, double salary)
+      : Person(name, age) {
+    this->employee_id = employee_id;
+    this->salary = salary;
+  }
+  void print_details() {
+    cout << "Name : " << Employee::name << endl;
+    cout << "Age : " << Employee::age << endl;
+    cout << "Employee ID : " << employee_id << endl;
+    cout << "Salary : " << salary << endl;
+  }
+};
+
+int main() {
+  string name;
+  int age;
+  int employee_id;
+  double salary;
+
+  cout << "Enter details...." << endl;
+  cout << "Name : ";
+  getline(cin, name);
+  cout << "Age : ";
+  cin >> age;
+  cout << "Employee ID : ";
+  cin >> employee_id;
+  cout << "Salary : ";
+  cin >> salary;
+
+  Employee e(name, age, employee_id, salary);
+  cout << "Printing details...." << endl;
+  e.print_details();
+}
+
+/*
+Enter details....
+Name : Pritam Debnath
+Age : 20
+Employee ID : 200
+Salary : 20000
+Printing details....
+Name : Pritam Debnath
+Age : 20
+Employee ID : 200
+Salary : 20000
+*/
