@@ -65,13 +65,22 @@ int main() {
   Phone p(id, number);
   cout << "Printing details...." << endl;
   p.display();
+
+  Phone p2 = p;
+  cout << "Printing the copied object...." << endl;
+  p2.display();
 }
 
 /* OUTPUT
 Enter details....
-Model ID : 172635
+Model ID : 171615
 Phone number : 9064327588
 Printing details....
-Model ID : 172635
+Model ID : 171615
+Phone number : 9064327588
+Gadget copy constructor called.
+Phone copy constructor called.
+Printing the copied object....
+Model ID : 171615
 Phone number : 9064327588
 */
