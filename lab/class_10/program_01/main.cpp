@@ -16,3 +16,66 @@ code.
 In main(), create a Car object using its parameterized constructor and call its
 display() method.
 */
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Vehicle {
+ private:
+  string manufacturer;
+  int year;
+
+ public:
+  Vehicle(string manufacturer, int year) {
+    this->manufacturer = manufacturer;
+    this->year = year;
+  }
+  void display() {
+    cout << "Manufacturer : " << manufacturer << endl;
+    cout << "Year         : " << year << endl;
+  }
+};
+
+class Car : public Vehicle {
+ private:
+  int num_doors;
+
+ public:
+  Car(string manufacturer, int year, int num_doors)
+      : Vehicle(manufacturer, year) {
+    this->num_doors = num_doors;
+  }
+  void display() {
+    Vehicle::display();
+    cout << "No. of doors  : " << num_doors << endl;
+  }
+};
+
+int main() {
+  string manufacturer;
+  int year, num_doors;
+
+  cout << "Enter car details :- " << endl;
+  cout << "Manufacturer : ";
+  getline(cin, manufacturer);
+  cout << "Year         : ";
+  cin >> year;
+  cout << "No. of doors  : ";
+  cin >> num_doors;
+
+  Car c(manufacturer, year, num_doors);
+  cout << "Displaying details...." << endl;
+  c.display();
+}
+
+/*OUTPUT
+Enter car details :-
+Manufacturer : BMW
+Year         : 2025
+No. of doors  : 6
+Displaying details....
+Manufacturer : BMW
+Year         : 2025
+No. of doors  : 6
+*/

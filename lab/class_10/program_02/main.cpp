@@ -14,3 +14,7 @@ method to Employee that displays all four data members.
 In main(), create one Employee using the default constructor and another using
 the parameterized constructor. Call print_details() on both.
 */
+
+#include <iostream>
+#include <string>
+using namespace std;
