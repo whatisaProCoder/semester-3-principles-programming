@@ -47,7 +47,7 @@ class Phone : public Gadget {
     phone_number = other.phone_number;
   }
   void display() {
-    cout << "Model ID : " << Gadget::get_id() << endl;
+    cout << "Model ID : " << get_id() << endl;
     cout << "Phone number : " << phone_number << endl;
   }
 };
