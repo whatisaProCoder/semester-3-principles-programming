@@ -1,3 +1,6 @@
 // Write a program to implement Exception Handling.
 
-class Di
+#include <iostream>
+using namespace std;
+
+int main() {}
